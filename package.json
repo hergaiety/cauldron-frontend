@@ -1,0 +1,23 @@
+{
+  "name": "cauldron",
+  "version": "0.0.0",
+  "description": "Frontend for Cauldron",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharpshark28/cauldron-frontend.git"
+  },
+  "author": "sharpshark28",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/sharpshark28/cauldron-frontend/issues"
+  },
+  "homepage": "https://github.com/sharpshark28/cauldron-frontend#readme",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "foundation-sites": "^6.1.1"
+  }
+}
