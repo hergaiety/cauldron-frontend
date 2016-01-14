@@ -9,3 +9,8 @@ angular.module("cauldron", ['ngRoute'])
     });
   }
 ])
+.directive('brewEntry', function() {
+  return {
+    templateUrl: '/js/directives/brewEntry.html'
+  };
+});
