@@ -3,14 +3,14 @@ angular.module("cauldron", ['ngRoute'])
   function($routeProvider){
     $routeProvider.when('/',{
       templateUrl:'/views/indexView.html',
+      controller:'indexView'
+    })
+    .when('/addEntry',{
+      templateUrl:'/views/addEntry.html',
+      controller:'addEntry'
     })
     .otherwise({
       redirectTo: '/',
     });
   }
 ])
-.directive('brewEntry', function() {
-  return {
-    templateUrl: '/js/directives/brewEntry.html'
-  };
-});

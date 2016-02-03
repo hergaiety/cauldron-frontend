@@ -1,6 +1,4 @@
 <div class="mainContainer">
-  <brew-entry></brew-entry>
-  <brew-entry></brew-entry>
-  <brew-entry></brew-entry>
-  <brew-entry></brew-entry>
+  <button ng-click='addNew()'> Click here for adding</button>
+  <brew-entry ng-repeat='entry in indexEntries' brew='entry'></brew-entry>
 </div>
