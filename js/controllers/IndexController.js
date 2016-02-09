@@ -1,5 +1,5 @@
 angular.module('cauldron')
-.controller('indexView', ['cauldronAPI','$scope','$q', function(cauldronAPI, $scope, $q){
+.controller('IndexController', ['cauldronAPI','$scope','$q', function(cauldronAPI, $scope, $q){
   console.log('indexView controller checking in');
 
   var setIndexEntries = function(){
@@ -22,5 +22,17 @@ angular.module('cauldron')
     function(response) {
       console.log('something went wrong', response);
     });
-  }
+  };
+
+  $scope.deleteEntry = function(id){
+    var promise = cauldronAPI.removeEntry(id);
+    promise.then(function(response){
+      console.log('Entry Deleted');
+      setIndexEntries();
+    },
+    function(response) {
+      console.log('deletion went wrong', response);
+    });
+  };
+
 }]);

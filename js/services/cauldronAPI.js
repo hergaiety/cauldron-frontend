@@ -55,9 +55,23 @@ angular.module('cauldron')
     });
   };
 
+  var getTags = function(){
+    console.log('get the tags here');
+  }
+
+  var removeEntry = function(entryId){
+    return $http({
+      method: 'DELETE',
+      url: backendURL+'/brew/'+entryId,
+    }).then(function(response){
+      return response.data;
+    });
+  }
   return {
     connect: connect,
     addEntry:addEntry,
     getEntries:getEntries,
+    getTags:getTags,
+    removeEntry:removeEntry,
   }
 }]);

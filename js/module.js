@@ -2,12 +2,12 @@ angular.module("cauldron", ['ngRoute'])
 .config(['$routeProvider',
   function($routeProvider){
     $routeProvider.when('/',{
-      templateUrl:'/views/indexView.html',
-      controller:'indexView'
+      templateUrl:'/views/IndexView.html',
+      controller:'IndexController'
     })
     .when('/addEntry',{
-      templateUrl:'/views/addEntry.html',
-      controller:'addEntry'
+      templateUrl:'/views/AddEntryView.html',
+      controller:'AddEntryController'
     })
     .otherwise({
       redirectTo: '/',

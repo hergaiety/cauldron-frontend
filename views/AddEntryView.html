@@ -1,0 +1,23 @@
+<form data-toggle="validator" role="form">
+  <div class="form-group">
+    <label for="entryData.title" class="control-label">Title: </label>
+    <input type="text" class="form-control" id="entryData.title" ng-model="entryData.title"  placeholder="Title" required>
+  </div>
+  <div class="form-group">
+    <label for="entryData.email" class="control-label">Email</label>
+    <input type="email" class="form-control" id="entryData.email" ng-model="entryData.author.email" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+    <div class="help-block with-errors"></div>
+  </div>
+  <div class="form-group">
+    <label for="entryData.imageURL" class="control-label">Image URL</label>
+    <input type="url" class="form-control" id="entryData.imageURL" ng-model="entryData.imageURL" placeholder="Image URL">
+    <div class="help-block with-errors">We ain't goin' to host your shit</div>
+  </div>
+  <div class="form-group">
+    <label for="entryData.description" class="control-label">Description: </label>
+    <textarea class="form-control" rows ='5' id="entryData.description" ng-model="entryData.description" placeholder="Description" required></textarea>
+  </div>
+  <div class="form-group">
+  <button type="submit" class="btn btn-primary" data-disable='true' ng-click='submitEntry()'>Submit</button>
+  </div>
+</form>

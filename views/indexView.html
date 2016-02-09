@@ -1,4 +1,7 @@
 <div class="mainContainer">
   <button ng-click='addNew()'> Click here for adding</button>
-  <brew-entry ng-repeat='entry in indexEntries' brew='entry'></brew-entry>
+  <div ng-repeat='entry in indexEntries'>
+    <brew-entry brew='entry'></brew-entry>
+    <button class="pull-right panel" ng-click="deleteEntry(entry.id)">Delete Entry</div>
+  </div>
 </div>
